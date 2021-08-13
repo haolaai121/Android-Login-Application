@@ -1,0 +1,24 @@
+cursor = db.rawQuery("SELECT * FROM " + DatabaseHelper.TABLE_NAME + " WHERE " + DatabaseHelper.COL_2 + "=? "  + " AND " + DatabaseHelper.COL_3 + "=? ",new String[]{username,password});
+        email = cursor.getString( cursor.getColumnIndex("Email") );
+        phone = cursor.getString( cursor.getColumnIndex("Phone") );
+        Info_Greeeting=(TextView)findViewById(R.id.Userinfo_Greeting);
+        Info_Email=(TextView)findViewById(R.id.UserInfo_Email);
+        Info_Username=(TextView)findViewById(R.id.Userinfo_Username);
+        Info_Phone=(TextView)findViewById(R.id.UserInfo_Phone);
+        Info_Greeeting.setText(greeting);
+        Info_Username.setText(username);
+        Info_Phone.setText(phone);
+        Info_Email.setText(email);
+
+
+cursor = db.rawQuery("SELECT * FROM " + DatabaseHelper.TABLE_NAME + " WHERE " + DatabaseHelper.COL_2 + "=? "  + " AND " + DatabaseHelper.COL_3 + "=? ",new String[]{username,password});
+        email = cursor.getString( cursor.getColumnIndex("Email") );
+        phone = cursor.getString( cursor.getColumnIndex("Phone") );
+        Info_Greeeting=(EditText)findViewById(R.id.UserInfo_Greeting);
+        Info_Email=(EditText)findViewById(R.id.UserInfo_Email);
+        Info_Username=(EditText)findViewById(R.id.Userinfo_Username);
+        Info_Phone=(EditText)findViewById(R.id.UserInfo_Phone);
+        Info_Greeeting.setText(greeting);
+        Info_Username.setText(username);
+        Info_Phone.setText(phone);
+        Info_Email.setText(email);
